@@ -10,3 +10,19 @@ class StaircaseTraversalRecursionTest(unittest.TestCase):
         actual = staircase.staircase_traversal(stairs, max_steps)
         print(actual)
         self.assertEqual(actual, expected)
+
+    def test_case2_check_possible_ways_optimized_with_dictionary(self):
+        stairs = 4
+        max_steps = 3
+        expected = 7
+        actual = staircase.staircase_traversal_optimized(stairs, max_steps)
+        print(actual)
+        self.assertEqual(actual, expected)
+
+    def test_case3_check_possible_ways_optimized_with_dictionary(self):
+        stairs = 4
+        max_steps = 3
+        expected = 7
+        actual = staircase.staircase_traversal_dp(stairs, max_steps)
+        print(actual)
+        self.assertEqual(actual, expected)
