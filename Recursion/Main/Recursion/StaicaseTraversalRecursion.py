@@ -1,3 +1,22 @@
+def staircase_traversal_sliding_window(height, steps):
+    ways_to_top = [1]
+    current_number_of_ways = 0
+
+    for current_height in range(1, height + 1):
+        start_of_window = current_height - steps - 1
+        end_of_window = current_height - 1
+        if start_of_window >= 0:
+            current_number_of_ways -= ways_to_top[start_of_window]
+
+        current_number_of_ways += ways_to_top[end_of_window]
+        ways_to_top.append(current_number_of_ways)
+    return ways_to_top[height]
+
+
+
+
+
+
 def staircase_traversal(height: int, steps: int):
     if height <= 1:
         return 1
