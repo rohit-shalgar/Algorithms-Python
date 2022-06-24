@@ -1,6 +1,7 @@
 import unittest
 
 import Main.LinkedList.RemoveDuplicateNodes as program
+import Main.LinkedList.RemoveKthNodeFromTheEnd as prg
 
 
 class StartLinkedList:
@@ -48,3 +49,17 @@ class TestPrograms(unittest.TestCase):
         actual = program.remove_duplicate_nodes(test)
         print(str(actual))
         self.assertEqual(actual.getNodesInArray(), expected.getNodesInArray())
+
+
+class ResmoveKthNodeFromTheEndTest(unittest.TestCase):
+    def test_case_1(self):
+        test = LinkedList(0).addMany([1, 2, 3, 4, 5, 6, 7, 8, 9])
+        expected = LinkedList(0).addMany([1, 2, 3, 4, 5, 7, 8, 9])
+        prg.remove_kth_node_from_the_end(test, 4)
+        self.assertEqual(test.getNodesInArray(), expected.getNodesInArray())
+
+    def test_case_2(self):
+        test = LinkedList(0).addMany([1, 2, 3, 4, 5, 6, 7, 8, 9])
+        expected = LinkedList(1).addMany([2, 3, 4, 5, 6, 7, 8, 9])
+        prg.remove_kth_node_from_the_end(test, 10)
+        self.assertEqual(expected.getNodesInArray(), test.getNodesInArray())
