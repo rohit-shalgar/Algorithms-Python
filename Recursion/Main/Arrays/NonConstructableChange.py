@@ -5,5 +5,4 @@ def nonConstructibleChange(input):
         if value > change + 1:
             return change + 1
         change = change + value
-
     return change + 1
