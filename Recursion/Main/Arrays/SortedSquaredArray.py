@@ -10,6 +10,7 @@ def sortedSquaredArrayOpt(input):
     leftIndx = 0
     rightIndx = len(input) - 1
     sortedArrayIndx = rightIndx
+
     sortedSquaredArray = [0] * len(input)
     while leftIndx <= rightIndx:
         leftValue = input[leftIndx]
