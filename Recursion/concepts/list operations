@@ -1,0 +1,7 @@
+creating a new list and appending an element to it ->
+    list = [] or power_set[i]
+    lists.append(list + [element])
+
+    example -  for i in range(power_sets_size):
+                     power_set = power_sets[i]
+                     power_sets.append(power_set + [element])
