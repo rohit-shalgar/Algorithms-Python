@@ -6,7 +6,7 @@ def getTheRoundedCharacter(unicode):
     return 96 + unicode % 122
 
 
-def lengthEncoder(string, key):
+def encryptString(string, key):
     encodedString = ""
     key = key % 26
     for i in range(0, len(string)):
